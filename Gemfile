@@ -22,6 +22,11 @@ gem "importmap-rails"
 
 gem 'active_model_serializers'
 
+# authentication gems
+gem 'devise'
+gem 'devise-jwt'
+gem 'jsonapi-serializer'
+
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
 

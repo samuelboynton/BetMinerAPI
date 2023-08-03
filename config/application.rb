@@ -21,8 +21,10 @@ module BetMinerAPI
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-         origins '*'
-         resource '*', :headers => :any, :methods => [:get, :post, :options]
+        # TODO: Change this to the actual frontend URL
+         origins 'http://localhost:4200'
+         
+         resource '*', :headers => :any, :methods => [:get, :post, :options, :delete], :credentials => true, expose: ['Authorization']
        end
     end
   end
